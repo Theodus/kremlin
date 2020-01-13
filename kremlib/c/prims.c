@@ -33,43 +33,43 @@ inline Prims_string Prims_string_of_bool(bool b) {
   }
 }
 
-bool Prims_op_GreaterThanOrEqual(int32_t x, int32_t y) {
+bool Prims_op_GreaterThanOrEqual(int64_t x, int64_t y) {
   return x >= y;
 }
 
-bool Prims_op_LessThanOrEqual(int32_t x, int32_t y) {
+bool Prims_op_LessThanOrEqual(int64_t x, int64_t y) {
   return x <= y;
 }
 
-bool Prims_op_GreaterThan(int32_t x, int32_t y) {
+bool Prims_op_GreaterThan(int64_t x, int64_t y) {
   return x > y;
 }
 
-bool Prims_op_LessThan(int32_t x, int32_t y) {
+bool Prims_op_LessThan(int64_t x, int64_t y) {
   return x < y;
 }
 
-int32_t Prims_pow2(int32_t x) {
+int64_t Prims_pow2(int64_t x) {
   /* FIXME incorrect bounds check here */
-  RETURN_OR((int64_t)1 << (int64_t)x);
+  RETURN_OR((uint64_t)1 << (uint64_t)x);
 }
 
-int32_t Prims_op_Multiply(int32_t x, int32_t y) {
+int64_t Prims_op_Multiply(int64_t x, int64_t y) {
   RETURN_OR((int64_t)x * (int64_t)y);
 }
 
-int32_t Prims_op_Addition(int32_t x, int32_t y) {
+int64_t Prims_op_Addition(int64_t x, int64_t y) {
   RETURN_OR((int64_t)x + (int64_t)y);
 }
 
-int32_t Prims_op_Subtraction(int32_t x, int32_t y) {
+int64_t Prims_op_Subtraction(int64_t x, int64_t y) {
   RETURN_OR((int64_t)x - (int64_t)y);
 }
 
-int32_t Prims_op_Division(int32_t x, int32_t y) {
+int64_t Prims_op_Division(int64_t x, int64_t y) {
   RETURN_OR((int64_t)x / (int64_t)y);
 }
 
-int32_t Prims_op_Modulus(int32_t x, int32_t y) {
+int64_t Prims_op_Modulus(int64_t x, int64_t y) {
   RETURN_OR((int64_t)x % (int64_t)y);
 }
